@@ -8,7 +8,7 @@
 <body>
 	<div id="root" class="container">
 		<div class="jumbotron">
-			<p><h1>Weather Forecosting Tool for PurpleWiFi Staff</h1><br><br></p>
+			<p><h1>Weather Forecasting Tool for PurpleWiFi Staff</h1><br><br></p>
 			<form class="form-horizontal" method="post" action="weather">
 				@csrf
 				<input type="text" id="location" name="location" placeholder="Enter a location" required> 
@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-sm-2"><b>Location</b></div>
 				<div class="col-sm-2"><b>Date</b></div>
-				<div class="col-sm-2"><b>Minmum Temp(C)</b></div>
+				<div class="col-sm-2"><b>Minimum Temp(C)</b></div>
 				<div class="col-sm-2"><b>Min T. W. Type</b></div>
 				<div class="col-sm-2"><b>Maximum Temp(C)</b></div>
 				<div class="col-sm-2"><b>Max T. W. Type</b></div>
