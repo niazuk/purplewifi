@@ -31,11 +31,13 @@ class weatherdetail extends Controller
 		$locations = json_decode($json,true);
 
 		$locationID = '310013';
+		$locationName = 'Manchester';
 
 		foreach ($locations['Locations']['Location'] as $data) {
 			if(isset($data['name'])){
 				if( strstr($data['name'], $request['location'])){
 					$locationID = $data['id'];
+					$locationName = $data['name'];
 					break;
 				}
 			}
@@ -65,7 +67,7 @@ class weatherdetail extends Controller
 
 		}
 
-		$weatherInfo['location'] = $request['location'];
+		$weatherInfo['location'] = $locationName;
 		$weatherInfo['date'] = $data['SiteRep']['DV']['Location']['Period'][1]['value'];
 		$weatherInfo['minTemp'] = $minTemp;
 		$weatherInfo['minType'] = config('weathertype.weatherType.'.$minType);
